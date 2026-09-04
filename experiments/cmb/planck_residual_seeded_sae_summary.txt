@@ -1,4 +1,5 @@
-Residual-Seeded SAE on Real Planck Residual Ports
-==================================================
-Date: 2026-08-18
-Residual-atom ablation retained 36.76%. Random-atom not selective. Original stream untouched.
+Residual-seeded SAE on real Planck residual ports — 2026-08-18
+Atoms 0..4 residual-seeded, dict size 12.
+Residual-atom ablation retains 36.76% residual power.
+Random-atom ablation does not selectively collapse residual power.
+Original stream untouched YES.

@@ -1,1 +1,5 @@
-Logical Residual Stream v0. R1/R2/R3 parallel. Checksum S PASS. 9 ports PASS. Path-patch collapses consensus power.
+Logical Residual Stream v0 — 2026-08-20
+S (4D) NEVER modified. R1 linear / R2 14D / R3 second-moment run in parallel.
+Logical layer = FILTER survivors from any stream.
+Recorded: 9 ports PASS; consensus residual power path-patches; checksum PASS.
+Ready for real residual datasets (NV, Planck, RF, EEG).

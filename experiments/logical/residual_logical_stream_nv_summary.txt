@@ -1,1 +1,4 @@
-Logical Residual Stream on real NV Hole/NoHole. Original S untouched. 20/20 ports PASS. Consensus 829.86 → 3.19 path, 0 zero.
+Logical Residual Stream on real NV ODMR (Hole vs NoHole) — 2026-08-20
+S untouched YES. Logical layer 20/20 PASS.
+Consensus residual power 829.86 → path-patch 3.19 → zero 0.
+E residual and second-moment residual recovered across R1/R2/R3.
