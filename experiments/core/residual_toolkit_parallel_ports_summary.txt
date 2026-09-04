@@ -1,0 +1,1 @@
+Parallel residual ports. Original stream never modified. Port-atom ablation → 0% joint residual power.

@@ -1,0 +1,1 @@
+14D pure-quadratic ports. SVD + quad_x0sq + prod_x0x1 PASS. Linear baseline misses nonlinear ports.

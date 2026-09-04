@@ -1,0 +1,1 @@
+Logical Residual Stream v0. R1/R2/R3 parallel. Checksum S PASS. 9 ports PASS. Path-patch collapses consensus power.

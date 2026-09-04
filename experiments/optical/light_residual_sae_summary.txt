@@ -1,0 +1,1 @@
+Optical SAE. Residual-atom retained 0.0000%. Random-atom 100%. Selective separability.

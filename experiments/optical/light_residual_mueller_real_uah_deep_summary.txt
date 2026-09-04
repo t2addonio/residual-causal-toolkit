@@ -1,0 +1,1 @@
+UAH deep. Spectral residual SVD 96% in top-1. Load-bearing ΔM elements M10, M22. Path-patch 0.005→0.001.

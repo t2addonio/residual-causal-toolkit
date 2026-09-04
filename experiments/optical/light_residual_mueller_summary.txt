@@ -1,0 +1,1 @@
+Mueller / Stokes Residual. Type V. Path-patch 18.79 → 12.20 (held 12.45). Zero → 0. Random intact. Carrier I,Q stable.

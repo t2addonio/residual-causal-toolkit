@@ -1,0 +1,1 @@
+Residual Mueller matrix. |cos|(ΔM, true)≈0.9997. Ablating M→I collapses residual Stokes power.

@@ -1,0 +1,1 @@
+Logical Residual Stream on real NV Hole/NoHole. Original S untouched. 20/20 ports PASS. Consensus 829.86 → 3.19 path, 0 zero.

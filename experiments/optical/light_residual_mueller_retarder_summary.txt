@@ -1,0 +1,1 @@
+Residual retarder ΔM |cos|=1.0000. Phase residual family complete with diattenuator.

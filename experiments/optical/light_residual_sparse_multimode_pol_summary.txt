@@ -1,0 +1,1 @@
+Sparse dict on multimode + polarization. Residual-atom 0.0000% retained. Random-atom 100%.

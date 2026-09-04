@@ -1,0 +1,1 @@
+Real UAH spectropolarimeter. Mean residual ||M−I||_F ≈ 0.17. First non-synthetic optical residual Mueller result.
