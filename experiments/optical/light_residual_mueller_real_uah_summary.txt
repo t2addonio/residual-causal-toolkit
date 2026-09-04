@@ -1,1 +1,10 @@
-Real UAH spectropolarimeter. Mean residual ||M−I||_F ≈ 0.17. First non-synthetic optical residual Mueller result.
+Residual Mueller on real UAH spectropolarimeter data
+Source: github.com/eejames2017/UAH-Mueller-Matrix-Spectropolarimeter
+Date: 2026-08-17
+
+Mean ||M-I||_F  Jan2023 0.1689  Aug2021 0.0898  contrastive 0.1184
+Residual Stokes power under measured M: 0.005882
+Under ablated I: 0
+Under random M: 0.043382
+Spectral residual SVD ~96% in top-1. Load-bearing ΔM elements M10, M22.
+First real (non-synthetic) optical residual Mueller result in the toolkit.

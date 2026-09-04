@@ -1,5 +1,6 @@
-Real Planck CMB Residual 14D Polynomial Expansion
-==========================================================================
+Real Planck CMB residual 14D — data − ΛCDM (PR3 R3.01)
 Date: 2026-08-19
-Pure quadratic residual of residual amplitude is the dominant selective port.
-Parallel to NV residual E². Original stream untouched.
+Residual low-rank (essentially rank-1). Dominant direction = pure quadratic residual
+of residual amplitude / residual power (p² / Amp² / maxabs², loading 0.73–0.99).
+Causal filter PASS on dominant SVD and pure residual_power² ports.
+Parallel to pure residual E² on real NV. Residual-seeded focus ~0% atom retained.

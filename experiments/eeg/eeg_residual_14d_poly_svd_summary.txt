@@ -1,1 +1,5 @@
-EEG 14D SVD. Residual power ~9× the 4D linear baseline. Same second-moment pattern as NV/Planck/RF.
+EEG 14D pure-quadratic residual
+Date: 2026-08-19
+4D features [mean, power, maxabs, change] → 14D. SVD0 97.1% variance.
+Dominant direction = power² / maxabs² / power·max. Path 89.63 → 0.21, zero → 0.
+14D residual power ~9× the 4D linear baseline. Same second-moment pattern as NV and Planck.

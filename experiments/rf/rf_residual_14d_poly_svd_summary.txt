@@ -1,0 +1,5 @@
+RF 14D pure-quadratic residual (narrowband IQ)
+Date: 2026-08-19
+SVD0 ~98% variance. Dominant direction = residual energy² (E² loading ~0.97).
+Causal filter PASS on contrastive, SVD0, and pure residual E².
+14D residual power ~4685× the 4D linear baseline.

@@ -1,1 +1,6 @@
-Real NV 14D poly. 10/13 ports PASS including lin_E, quad_Esq, prod_D_E. 4D linear only 2/5 PASS.
+Real NV ODMR 14D poly ports — Zenodo 14697917 Hole vs NoHole
+Date: 2026-08-19
+4D features [D, E, dip_depth, asym] → pure quadratic 14D, original stream untouched.
+14D PASS includes lin_E, quad_Esq (power 106.24 → path 9.13), prod_D_E.
+4D linear baseline only 2/5 PASS. Nonlinear E² and D·E become isolatable and causal.
+SVD0 is essentially pure residual E² (loading ~0.91–0.999).
