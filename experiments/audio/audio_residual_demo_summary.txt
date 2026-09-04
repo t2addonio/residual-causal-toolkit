@@ -1,0 +1,5 @@
+Audio Residual Causal Toolkit Demo
+==================================================
+Date: 2026-08-17
+Planted residual feedback 1250 Hz recovered at 1250.0 Hz (error 0 Hz).
+Path-patch 1018.09 → 0.10; zero → 0; random 1010.93. STATUS PASS.

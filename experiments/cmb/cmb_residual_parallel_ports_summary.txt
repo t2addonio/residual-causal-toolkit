@@ -1,0 +1,5 @@
+CMB Residual Parallel Ports
+======================================================
+Date: 2026-08-18
+Ports opened: galactic, systematics, pointsource, subspace_velocity, residual_joint, static_primary.
+All PASS. Original stream untouched. Port-atom ablation retains 6.27%.

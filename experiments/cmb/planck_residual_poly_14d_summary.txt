@@ -1,0 +1,5 @@
+Real Planck CMB Residual 14D Polynomial Expansion
+==========================================================================
+Date: 2026-08-19
+Pure quadratic residual of residual amplitude is the dominant selective port.
+Parallel to NV residual E². Original stream untouched.

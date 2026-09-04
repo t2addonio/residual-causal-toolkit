@@ -1,0 +1,4 @@
+CRAI-1 — Reference-Driven Causal Audio Isolation
+================================================
+Date: 2026-08-27
+14D zero drop 100%. PHASE(φ=π) hit-frame leak drop 97.13%, carrier retain 99.95%. STATUS PASS.

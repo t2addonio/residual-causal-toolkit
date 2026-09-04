@@ -1,0 +1,33 @@
+Audio Residual 5D Toolkit — Residual Feedback Onset
+====================================================
+Date: 2026-08-18
+
+SETUP
+  Audio mixture: fundamental + harmonics + weak sustained residual
+  Signal = above + residual feedback-like tone with rising onset envelope
+  Held-out = above without the onset residual
+  5D residual: 4D contrastive subspace + change/onset coordinate
+
+5D RESIDUAL DIRECTION
+  Weights: [-0.9748, 0.0127, -0.0048, -0.0045, 0.2226]
+  (last = feedback onset / change coordinate)
+
+PATH-PATCH / CONTROLS
+  Residual power signal     : 424.0486
+  Residual power held       : 47.7976
+  Path-patch → held         : 47.2598
+  Zero-patch                : 0.0000
+  Random-direction path-patch: 284.7556
+
+SPARSE ATOM ABLATION
+  Residual-atom retained    : 0.0000 %
+  Random-atom retained      : 94.70 %
+
+VALIDATION
+  [PASS] Path-patch
+  [PASS] Zero-patch
+  [PASS] Random-direction
+  [PASS] Residual-atom ablation
+  [PASS] Random-atom ablation
+
+STATUS: PASS

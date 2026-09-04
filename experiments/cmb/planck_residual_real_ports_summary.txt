@@ -1,0 +1,5 @@
+REAL Planck CMB Power-Spectrum Residual Ports
+==============================================
+Date: 2026-08-18
+Ports: TT_residual, TE_residual, EE_residual, residual_amplitude, subspace_velocity. All PASS.
+Original stream untouched.

@@ -1,0 +1,5 @@
+Residual-Frame Torsion Diagnostic — REAL residual data
+========================================================================
+Date: 2026-08-21
+Planck and NV real residuals: successive rotation far below random floor.
+Verdict: residual frame stationary. S untouched.

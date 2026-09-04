@@ -1,0 +1,5 @@
+CRAI-2 — Per-mic isolation
+======================================================
+Date: 2026-08-27
+Dropped B-mic oracle. Mixture-domain suppress not printable (guitar SI-SDR 11.95 → 13.52 dB).
+14D zero drop 100% on both mics. STATUS PASS on causal filter, not on professional print bar.

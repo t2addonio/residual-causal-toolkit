@@ -1,0 +1,5 @@
+14D Polynomial Residual Expansion on REAL Planck CMB residual spectra
+=======================================================================
+Date: 2026-08-19
+Residual = data − ΛCDM. Rank-1. Dominant direction residual_power² (~0.985). Causal filter PASS.
+Original stream untouched.

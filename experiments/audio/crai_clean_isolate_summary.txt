@@ -1,0 +1,5 @@
+CRAI-3 — Clean isolation by carrier resynthesis
+================================================
+Date: 2026-08-28
+Guitar SI-SDR 11.95 → 23.96 dB. Snare -3.74 → 19.58 dB. STATUS PASS on synthetic scene.
+Output rebuilt from carrier port, not mixture holes. Toolkit DSP only.

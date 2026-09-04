@@ -1,0 +1,5 @@
+CRAI-96k — Causal single-insert isolation
+==========================================
+Date: 2026-08-28
+96 kHz. STFT insert latency illegal. Throughput 0.333 ms at 32-sample block.
+No neural net, no other mic. Guitar SI-SDR 12.50 → 13.33 dB. Isolation depth below CRAI-3 offline.
