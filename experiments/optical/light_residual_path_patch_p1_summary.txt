@@ -1,0 +1,1 @@
+Optical P1 single-mode path-patch. Residual power 53.31 → 15.95 (held 16.11). Zero → 0. Random 53.29.

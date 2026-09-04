@@ -1,0 +1,1 @@
+Optical P3 polarization path-patch. Residual power 13.72 → 0.15. |Ey|² 0.168 → 0.001. H-pol carrier stable.

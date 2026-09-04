@@ -1,0 +1,6 @@
+NV Color-Center Residual Stream Toolkit
+============================================================
+Date: 2026-08-17
+Zenodo 10.5281/zenodo.14697917 Hole n=49 vs NoHole n=56.
+E residual 94.757 → 3.278 MHz on path-patch; zero → 0; direction 99.999% along E.
+Atom ablation 0%. STATUS PASS.

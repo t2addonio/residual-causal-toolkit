@@ -1,0 +1,1 @@
+EEG 5D differential residual. Path-patch 125.4 → 0.002; zero → 0; atom 0%. STATUS PASS.

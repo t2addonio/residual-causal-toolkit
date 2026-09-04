@@ -1,0 +1,1 @@
+Residual Interferometer. Vector fringe 0.788 vs random 0.303. Optical ptp 298.4 vs random 0.0001. Unitary True. Complement untouched.

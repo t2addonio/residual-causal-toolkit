@@ -1,0 +1,1 @@
+Continuum P2. Co-occurrence SVD rank-1. Joint FILTER PASS. PHASE+BEAM(π/4) ptp 290.90 vs random 0.014.

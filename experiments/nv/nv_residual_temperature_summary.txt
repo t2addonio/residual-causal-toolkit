@@ -1,0 +1,1 @@
+NV temperature residual. Physics-informed D(T) α=−74 kHz/K. Path-patch 1.59 → 0.85; zero → 0. STATUS PASS.

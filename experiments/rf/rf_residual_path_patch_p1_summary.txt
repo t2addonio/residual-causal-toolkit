@@ -1,0 +1,1 @@
+RF-P1. Residual power 320566 → 5.95 path-patch; zero → 0; random intact. RES cos 0.44.

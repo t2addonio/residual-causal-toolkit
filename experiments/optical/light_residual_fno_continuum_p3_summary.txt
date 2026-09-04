@@ -1,0 +1,1 @@
+Continuum P3 source-plane PHASE write-hook. Out plane 298.95 → 1.81 path. Source unitarity flat to 1e-15.

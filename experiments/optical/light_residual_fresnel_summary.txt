@@ -1,0 +1,1 @@
+Fresnel residual. α=1 nulls post-propagation residual power. Causal structure survives unitary evolution.

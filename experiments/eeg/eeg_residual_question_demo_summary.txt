@@ -1,0 +1,5 @@
+EEG Residual Causal Toolkit — Question / Comprehension Residual
+================================================================
+Date: 2026-08-18
+Path-patch 66.2703 → 1.3499; zero → 0; random 66.2575.
+Residual-atom retained 0.0006%; random-atom 100.26%. STATUS PASS.

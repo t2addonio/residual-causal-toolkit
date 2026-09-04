@@ -1,0 +1,3 @@
+Pure Optical Residual-Stream Experiment
+=======================================================
+α=1 nulls residual power to ~0 (4e-29). Random control 142.69 intact. α=2 sign-flips.
