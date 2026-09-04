@@ -1,0 +1,11 @@
+Phase D-stronger — Online residual control with R2_svd_0 mapped ports
+=====================================================================
+Date: 2026-08-22
+
+Lift the high residual-power pure-quadratic port (R2_svd_0) into the Phase D
+online write-hook and test whether it produces larger selective behavior change
+than the original contrastive d_model direction.
+
+Smoke validation (CPU): both directions zero_collapses=True, coeff_matches_held=True.
+Full comparison: bash run_phase_d_stronger_16.sh
+Original residual stream remains untouched except at the controlled write site.

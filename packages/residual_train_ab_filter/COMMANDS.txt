@@ -1,0 +1,52 @@
+Residual Train A/B — command sheet
+==================================
+Arm A = CE only, FILTER at eval
+Arm B = CE + residual READ in the loop, same FILTER at eval
+8 seeds × 2 arms = 16 jobs
+
+GPU: a single 24 GB 3090 is enough. gpt2-small + batch 16 + sidecar
+forwards in Arm B sits well under 8 GB. 4x4090 only made it faster,
+not feasible. Expect ~20–40 min per job on a 3090, ~6–10 h for all 16
+sequential. Two 3090s: GPUS="0 1" halves wall time.
+
+0) Unpack
+---------
+mkdir -p ~/runs && cd ~/runs
+tar xzf residual_train_ab_filter.tar.gz
+cd residual_train_ab_filter
+chmod +x run_4x4090.sh run_1x3090.sh run_smoke.sh
+
+1) Environment (conda recommended)
+----------------------------------
+conda create -y -n residual-ab python=3.11
+conda activate residual-ab
+pip install --upgrade pip
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
+python -c "from transformers import GPT2LMHeadModel, GPT2Tokenizer; GPT2Tokenizer.from_pretrained('gpt2'); GPT2LMHeadModel.from_pretrained('gpt2'); print('gpt2 cached')"
+
+2) Sanity (optional, 1 epoch, tiny data)
+----------------------------------------
+./run_smoke.sh cpu
+./run_smoke.sh cuda:0
+
+3) Full run
+-----------
+./run_4x3090.sh
+./run_1x3090.sh
+GPUS="0 1" ./run_4x4090.sh
+./run_4x4090.sh
+
+4) Overrides
+------------
+SEEDS="0 1 2 3 4 5 6 7" GPUS="0 1 2 3" EPOCHS=6 N_TRAIN=4096 BATCH=16 ./run_4x4090.sh
+ARMS="A" ./run_4x4090.sh
+ARMS="B" ./run_4x4090.sh
+
+5) Aggregate
+------------
+python aggregate.py --results results --out results/ab_summary.json --md results/ab_summary.md
+cat results/ab_summary.md
+
+Success rule: Arm B ≥ Arm A on FILTER pass count and residual READ without tanking acc.
+This run FAILED that rule. Do not add a third architecture.

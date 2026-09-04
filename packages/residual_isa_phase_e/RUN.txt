@@ -1,0 +1,19 @@
+Residual ISA Phase E — execution commands
+=========================================
+Box: 4 x RTX 4090
+What this run proves: PHASE(φ) on a surviving 2-D residual core
+moves GPT-2 answer logprob; a random 2-D plane does not.
+
+1. One-time setup
+cd residual_isa_phase_e
+python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+2. Smoke
+python phase_e_interferometer.py --seed 0 --device cuda:0 --layer 6 --n-train 256 --epochs 1 --n-sig 16 --n-held 16 --n-phi 5 --out-dir results/phase_e_smoke
+
+3. Full 16-seed 4x4090
+chmod +x run_phase_e_4x4090.sh
+SEEDS="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15" GPUS="0 1 2 3" N_TRAIN=8192 EPOCHS=12 N_SIG=64 N_HELD=64 N_PHI=9 LAYER=6 bash run_phase_e_4x4090.sh
+
+4. Aggregate
+python aggregate_phase_e.py --root results/phase_e --out results/phase_e/phase_e_aggregate.json

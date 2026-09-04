@@ -1,0 +1,23 @@
+SDR drop-in — next week
+=======================
+Do not start this until Phase E aggregate is in hand.
+
+The SDR is RAM, not a new computer. IQ samples are the residual stream S.
+
+Minimum instrument
+  complex baseband IQ stacked as a real vector per window
+  two ensembles: carrier-only vs carrier + residual tone / interferer
+  write path: replay a patched buffer into the TX, or edit IQ offline
+
+Protocol (same ISA)
+  1. LOAD     windowed IQ → vector S
+  2. EXTRACT  contrastive 2-D core (interferer vs carrier)
+  3. FILTER   path-patch / zero / random / atom
+  4. PHASE    rotate the surviving 2-D core
+  5. READ     residual-band power, EVM, or BER
+  6. FAULT    if a random plane also fringes, the address was never legal
+
+First SDR run (V4 is on the bench as of 3 Sep 2026)
+  Record 64 signal buffers (interferer on) and 64 held-out (interferer off).
+  Offline IQ first. Live TX rewrite only if offline path-patch already passes.
+  Conducted coax + pads. Received S untouched.
