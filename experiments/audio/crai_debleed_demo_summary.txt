@@ -1,4 +1,9 @@
-CRAI-1 — Reference-Driven Causal Audio Isolation
-================================================
+CRAI — Reference-Driven Causal Audio Isolation
 Date: 2026-08-27
-14D zero drop 100%. PHASE(φ=π) hit-frame leak drop 97.13%, carrier retain 99.95%. STATUS PASS.
+
+Operational contrast is B-loud vs B-quiet frames of A (not mean(A)-mean(B)).
+14D exact map on 4 leakage bands. SVD0 99.77%.
+14D zero drop 100%; path → held; random retains 100%.
+Waveform PHASE(φ=π) hit-frame leak -97.13%, quiet-frame carrier retain 99.95%.
+Random scrambled-H does not match. STATUS PASS.
+S untouched. Interventions on parallel leakage port.

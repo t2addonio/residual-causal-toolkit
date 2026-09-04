@@ -1,5 +1,8 @@
-CRAI-2 — Per-mic isolation
-======================================================
+CRAI-2 — Per-mic isolation then independent time/phase
 Date: 2026-08-27
-Dropped B-mic oracle. Mixture-domain suppress not printable (guitar SI-SDR 11.95 → 13.52 dB).
-14D zero drop 100% on both mics. STATUS PASS on causal filter, not on professional print bar.
+
+Live B-mic dropped: each bleed path has its own delay/phase.
+Self-contrast on G and on S. 14D zero drop 100% both mics.
+Waveform SI-SDR guitar 11.95→13.52 dB — mixture suppress NOT printable.
+Bleed-path delay recovered from removed residual: snare-in-G +4.49 ms (planted 4.50).
+Tony bar failed on isolated-still-sounds-like-a-blend. CRAI-3 rebuilds from carrier port.
