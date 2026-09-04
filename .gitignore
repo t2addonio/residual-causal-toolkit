@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.env
+.grok/
+.previewdocs/
+browsed_files/
+*.wav
+*.png
+*.npy
+*.cf32
+*.tar.gz
+*.docx
+.DS_Store

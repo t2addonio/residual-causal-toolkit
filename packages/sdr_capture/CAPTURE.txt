@@ -1,0 +1,41 @@
+SDR capture recipe — Residual Stream ISA, offline IQ first
+================================================================
+Do not live-TX a write-hook until FILTER passes on files THIS radio wrote.
+
+Hardware (any of): RTL-SDR / HackRF / Lime / USRP. Complex baseband IQ.
+
+Master clock
+  Lock the SDR sample clock. Do not change gain, LO, or fs between ensembles.
+  Recommended first-run fs = 2048000 Hz, window N = 2048 samples
+  (~1.00 ms per window).
+
+Two ensembles (required — one recording is energy, not an address)
+  HELD  interferer OFF   carrier only (plus whatever the front-end always adds)
+  SIG   interferer ON    same carrier + a CW residual / interferer tone
+  64 windows each. Same LO. Same gain. Same cable.
+
+What to plant this week
+  Carrier offset from LO  ~ 200 kHz
+  Residual tone offset    ~ 450 kHz   (well clear of the carrier bin)
+  Residual amplitude      ~ −8 to −12 dBc. Audible / visible on a spectrum plot.
+
+Drop files here
+  /home/workdir/artifacts/sdr_capture/
+    sig_00.npy … sig_63.npy     complex64/128, length N
+    held_00.npy … held_63.npy
+  OR
+    sig.cf32   held.cf32        raw complex64 streams (will be windowed by N)
+    meta.json  {"fs": 2048000, "n": 2048, "f_carrier": 200000.0, "f_res": 450000.0}
+
+Then re-run
+  python /home/workdir/artifacts/sdr_residual_offline_iq.py
+
+Illegal
+  One long antenna recording with no OFF ensemble.
+  Calling RSSI / “whatever the antenna hears” an APU.
+  Live TX rewrite before this script prints FILTER=PASS on the real files.
+  A new architecture. The radio is RAM. The mixer is the processor.
+
+Week two (only after PASS)
+  Replay example_patched_zero.cf32 and example_patched_phase_pi.cf32 into TX.
+  Score residual-bin power / EVM on a second SDR or a spectrum tap.
