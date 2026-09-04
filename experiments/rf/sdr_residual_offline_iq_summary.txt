@@ -1,0 +1,1 @@
+Offline SDR IQ residual. FILTER on file-written IQ before any live TX rewrite. V4 plant: conducted, RX-only.

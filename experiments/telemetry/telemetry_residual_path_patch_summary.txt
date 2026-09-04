@@ -1,0 +1,2 @@
+Telemetry residual path-patch. Residual mechanical harmonic at 3.3× order.
+T-P1 residual-band energy 0.0448 → 0.0363 (held). Zero → 0. Carrier-band protected.

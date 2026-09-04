@@ -1,0 +1,2 @@
+REAL UCI Naval Propulsion Plants. Residual = compressor decay.
+Path-patch 1.374 → 0.0084. Zero → 0. Top features T2, T48, Pexh, TIC.

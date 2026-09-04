@@ -1,0 +1,1 @@
+Quantum residual 14D from reconstructed mid-circuit Pauli residual geometry. SVD0 ~97.6%. Causal filter PASS.
