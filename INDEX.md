@@ -6,6 +6,12 @@ Working store (figures, WAVs, full-length originals): `/home/workdir/artifacts`
 S is never overwritten. Interventions live on parallel ports.
 FILTER = path-patch + zero + random + (atom). Probe arms, not co-occurrence SVD-1.
 
+## Companion repos
+
+- Paper / grokking discovery: https://github.com/t2addonio/residual-stream-grokking
+- Isolate + rescue + freeze-at-transition (16-seed modular add): https://github.com/t2addonio/isolate-rescue-grokking
+- Hybrid lab: https://github.com/t2addonio/hybrid-lab
+
 ## Layout
 
 ```
