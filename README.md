@@ -2,12 +2,18 @@
 
 Cross-domain residual-stream addressing: contrastive extraction, path-patch, parallel ports, Residual Stream ISA, CRAI audio isolation, and field / kernel ports.
 
-**Author:** Tony Taddonio
+**Author:** Tony Taddonio  
 **Repositories:**
 - This repo — full toolkit corpus (created 4 September 2026)
 - [`t2addonio/residual-stream-grokking`](https://github.com/t2addonio/residual-stream-grokking) — original grokking residual-component paper (left intact)
 
-**Progress paper (4 Sep 2026):** [`docs/papers/Residual_Causal_Toolkit_Progress_Paper_2026-09.md`](docs/papers/Residual_Causal_Toolkit_Progress_Paper_2026-09.md)
+**Unified paper (8 Sep 2026):** [`docs/papers/Residual_Causal_Toolkit_Unified_Paper_2026-09.md`](docs/papers/Residual_Causal_Toolkit_Unified_Paper_2026-09.md)
+
+Illustrated 25-page PDF with 29 campaign figures lives in the working artifacts store as `Residual_Causal_Toolkit_Unified_Paper_2026-09.pdf` (GitHub connector is text-first; binaries stay in the working store).
+
+**Quantum companion:** [`docs/papers/Quantum_Residual_Stream_Causal_Interventions_v1.md`](docs/papers/Quantum_Residual_Stream_Causal_Interventions_v1.md)
+
+**Earlier progress paper (4 Sep 2026):** [`docs/papers/Residual_Causal_Toolkit_Progress_Paper_2026-09.md`](docs/papers/Residual_Causal_Toolkit_Progress_Paper_2026-09.md)
 
 ## One-line claim
 
@@ -30,64 +36,13 @@ It is not a neural-operator lab, not an LLM, not a QPU, and not a replacement fo
 4. Selective control — STORE / PHASE / BEAM on a copy, or an online write-hook.
 5. Validate — residual-dependent READ moves; random intact; checksum of `S` unchanged except at the controlled write site.
 
-## Repo layout
+## Status on 8 September 2026
 
-```
-docs/papers/          progress paper + protocol notes
-experiments/          domain scripts + run summaries
-  optical/            phase-cancel, Fresnel, Jones, Mueller, continuum P1–P3
-  rf/                 RF-P1/P2/P3, 5-D, 14-D, offline SDR IQ
-  nv/                 ODMR toolkit, B, T, 14-D, parallel ports
-  cmb/                synthetic CMB ports + real Planck
-  eeg/                question residual, 5-D, 14-D
-  audio/              residual demos + CRAI-1/2/3 + 96 kHz causal bank
-  telemetry/          synthetic boat-style + real UCI naval
-  transformer/        modular / tiny-transformer 14-D
-  quantum/            reconstructed QNN residual 14-D
-  isa/                interferometer + Residual Stream ISA
-  logical/            logical residual stream v0 + NV
-  core/               parallel ports, 14-D campaign, torsion, triples
-packages/
-  residual_causal_gpt2/     Phases A–D + toolkit library
-  residual_isa_phase_e/     Phase E PHASE(φ) package
-  residual_train_ab_filter/ Train A/B (B was not ≥ A)
-  sdr_capture/              RTL-SDR V4 offline IQ examples
-INDEX.md                    file-by-file catalog
-```
+**Closed.** Optical classical suite including real UAH Mueller. RF path-patch P1–P3. NV single / multi / B / T plus real Hole/NoHole 14-D. Planck residual ports. EEG. Telemetry synthetic + real naval. GPT-2 Phases A–D (16/16 online write-hook). Residual Stream ISA. CRAI-3 synthetic PASS + 96 kHz causal bank. Continuum P1–P3. Train A/B executed; success rule FAIL (`B` is not `≥ A`). Unified paper written (optical + superposition + quantum + ISA + later campaign).
 
-Figures (`.png`) and demonstration audio (`.wav`) are listed in `INDEX.md`. They live in the working artifacts store and can be regenerated from the scripts. The GitHub connector used for this upload is text-first; binaries were not force-pushed.
-
-## Status on 4 September 2026
-
-**Closed.** Optical classical suite including real UAH Mueller. RF path-patch P1–P3. NV single / multi / B / T plus real Hole/NoHole 14-D. Planck residual ports. EEG. Telemetry synthetic + real naval. GPT-2 Phases A–D (16/16 online write-hook). Residual Stream ISA. CRAI-3 synthetic PASS + 96 kHz causal bank. Continuum P1–P3. Train A/B executed; success rule FAIL (`B` is not `≥ A`).
-
-**In hand.** RTL-SDR Blog V4 (R828D + RTL2832U), receive-only, arrived 3 September 2026. Preferred first plant: conducted coax + pads, SDR as RX, separate scriptable TX. Closed loop = READ residual port → FILTER → WRITE an actuator. Received `S` untouched.
+**In hand.** RTL-SDR Blog V4 (R828D + RTL2832U), receive-only, arrived 3 September 2026. First IQ dump 7 September 2026 (`fm_sanity.cu8` at 97.5 MHz). Preferred first plant: conducted coax + pads, SDR as RX, separate scriptable TX. Closed loop = READ residual port → FILTER → WRITE an actuator. Received `S` untouched.
 
 **Audio product gate.** Trained-ear isolation bar, not computer metrics alone.
-
-## How to run a slice
-
-```bash
-# Optical path-patch P1
-python experiments/optical/light_residual_path_patch_p1.py
-
-# CRAI-3 clean isolation (synthetic scene)
-python experiments/audio/crai_clean_isolate.py
-
-# Offline SDR IQ residual
-python experiments/rf/sdr_residual_offline_iq.py
-
-# GPT-2 Phase D online write-hook
-cd packages/residual_causal_gpt2
-python phase_d_online_residual.py
-```
-
-Train A/B (already run; do not change architecture between arms):
-
-```bash
-cd packages/residual_train_ab_filter
-cat COMMANDS.txt
-```
 
 ## Related paper
 

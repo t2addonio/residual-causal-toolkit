@@ -1,7 +1,7 @@
-# Upload status — 2026-09-04 16:35 EDT
+# Upload status — 2026-09-08
 
 https://github.com/t2addonio/residual-causal-toolkit
 
-INDEX.md refreshed to the live tree.
-Logical residual stream (v0 + NV) and Planck-seeded SAE cores are on main.
-Protocol spine is indexed. PNG/WAV/IQ cubes stay in the working store.
+Unified paper (optical + superposition + quantum + ISA + later campaign) committed as markdown.
+Illustrated PDF stays in the working store (text-first GitHub connector).
+First owned RTL-SDR V4 IQ dump recorded 2026-09-07.

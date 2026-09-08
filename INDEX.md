@@ -1,40 +1,21 @@
 # Residual Causal Toolkit — repository index
 
 Public repo: https://github.com/t2addonio/residual-causal-toolkit
-Working store (figures, WAVs, full-length originals): `/home/workdir/artifacts`
 
 S is never overwritten. Interventions live on parallel ports.
 FILTER = path-patch + zero + random + (atom). Probe arms, not co-occurrence SVD-1.
 
+## Unified paper (8 September 2026)
+
+- `docs/papers/Residual_Causal_Toolkit_Unified_Paper_2026-09.md` — text source
+- Working store: `Residual_Causal_Toolkit_Unified_Paper_2026-09.pdf` — 25 pages, 29 campaign figures
+- `docs/papers/Quantum_Residual_Stream_Causal_Interventions_v1.md` — quantum companion folded into §10
+
 ## Companion repos
 
 - Paper / grokking discovery: https://github.com/t2addonio/residual-stream-grokking
-- Isolate + rescue + freeze-at-transition (16-seed modular add): https://github.com/t2addonio/isolate-rescue-grokking
+- Isolate + rescue + freeze-at-transition: https://github.com/t2addonio/isolate-rescue-grokking
 - Hybrid lab: https://github.com/t2addonio/hybrid-lab
-
-## Layout
-
-```
-experiments/
-  optical/     phase-cancel, SAE, P1–P3, Fresnel, multimode, Jones,
-               Mueller Stokes / ΔM / retarder / UAH real, Continuum P1–P3
-  rf/          RF-P1, RF-P2, SDR offline IQ ISA, 14D RF summary
-  nv/          ODMR (D,E), temperature, multi-NV + B, 14D E²
-  cmb/         Planck residual ports + 14D + seeded-SAE notes
-  eeg/         question demo + 5D + 14D summaries
-  audio/       CRAI-1 debleed, CRAI-2 per-mic, CRAI-3 resynthesis, CRAI-96k, 1250 Hz demo
-  telemetry/   T-P1 NMEA + vibration 3.3× order
-  isa/         residual interferometer PHASE(φ)+BEAM(θ)
-  logical/     R1/R2/R3 consensus layer (v0 + real NV)
-  core/        shared 14D map + parallel-ports / torsion notes
-  quantum/     14D QNN / mid-circuit residual notes
-packages/
-  residual_causal_gpt2/   MiniGPT + Phases A–D + D-stronger + launchers
-  residual_train_ab_filter/  Arm A vs B (honest FAIL 2026-08-31)
-  residual_isa_phase_e/   Phase E interferometer launcher
-  sdr_capture/            RTL-SDR V4 offline IQ recipe
-docs/papers/              progress paper markdown
-```
 
 ## Protocol spine (what to run first)
 
@@ -60,5 +41,5 @@ docs/papers/              progress paper markdown
 
 ## Not in git (on purpose)
 
-PNG figures, WAV renders, measured IQ captures, UAH 4×4×Nλ cubes, GPT-2 checkpoints.
-Byte-identical 15–26 k figure-complete originals remain in the working store.
+PNG figures, WAV renders, measured IQ captures, UAH 4×4×Nλ cubes, GPT-2 checkpoints, the illustrated 25-page PDF (~5.5 MB).
+Byte-identical figure-complete originals remain in the working store.
