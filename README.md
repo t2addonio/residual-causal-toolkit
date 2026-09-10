@@ -1,3 +1,7 @@
+> **Pipeline stage 3 of 4 — Cross-domain residual addressing**  
+> Grokking → causal residual isolation → distributed/additive representations → **cross-domain residual addressing** → real-world signal experiments.  
+> Previous: [`isolate-rescue-grokking`](https://github.com/t2addonio/isolate-rescue-grokking) · Next: [`hybrid-lab`](https://github.com/t2addonio/hybrid-lab) · Map: [github.com/t2addonio](https://github.com/t2addonio)
+
 # Residual Causal Toolkit
 
 Cross-domain residual-stream addressing: contrastive extraction, path-patch, parallel ports, Residual Stream ISA, CRAI audio isolation, and field / kernel ports.
@@ -6,6 +10,8 @@ Cross-domain residual-stream addressing: contrastive extraction, path-patch, par
 **Repositories:**
 - This repo — full toolkit corpus (created 4 September 2026)
 - [`t2addonio/residual-stream-grokking`](https://github.com/t2addonio/residual-stream-grokking) — original grokking residual-component paper (left intact)
+- [`t2addonio/isolate-rescue-grokking`](https://github.com/t2addonio/isolate-rescue-grokking) — isolate / rescue / additive tributaries
+- [`t2addonio/hybrid-lab`](https://github.com/t2addonio/hybrid-lab) — live RF / edge plant
 
 **Unified paper (8 Sep 2026):** [`docs/papers/Residual_Causal_Toolkit_Unified_Paper_2026-09.md`](docs/papers/Residual_Causal_Toolkit_Unified_Paper_2026-09.md)
 
