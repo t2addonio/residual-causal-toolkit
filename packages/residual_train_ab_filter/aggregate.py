@@ -14,7 +14,11 @@ def main():
     root = Path(args.results)
     rows = [json.loads(p.read_text()) for p in sorted(root.glob("arm*_seed*.json"))]
     if not rows:
-        raise SystemExit(f"no arm*_seed*.json under {root}")
+        raise SystemExit(
+            f"aggregate.py: no arm*_seed*.json files under {root.resolve()}.\n"
+            "No A/B result data is committed to this repo; run the training arms first "
+            "(see README / RUN instructions) or pass --results <dir>."
+        )
     summary = {"n_files": len(rows), "arms": {}}
     lines = ["# Train A/B — residual filter in the loop", "",
              "| arm | n | mean acc | FILTER pass/n | mean p_sig | mean p_path | mean epochs-pass |",

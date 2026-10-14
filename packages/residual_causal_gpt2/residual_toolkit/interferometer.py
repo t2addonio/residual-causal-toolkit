@@ -9,8 +9,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-# residual_interferometer.py ships in packages/residual_isa_phase_e
-_ART = Path(__file__).resolve().parents[2] / "residual_isa_phase_e"
+# The real module lives in <repo>/experiments/isa/residual_interferometer.py
+_ART = Path(__file__).resolve().parents[3] / "experiments" / "isa"
 if str(_ART) not in sys.path:
     sys.path.insert(0, str(_ART))
 

@@ -4,6 +4,7 @@ phi = [x0..x3, x0²..x3², 6 products]. Same map across NV / Planck / EEG / RF /
 Dominant residual direction is consistently a second-moment monomial (E², power², Amp²).
 """
 from __future__ import annotations
+import zlib  # stable per-name seed (hash() is salted per process)
 import numpy as np
 
 def phi14(X4):
@@ -18,7 +19,7 @@ def causal_port(X_sig, X_held, d, name="port"):
     p0=float(np.mean(c**2))
     p_path=float(np.mean(((X_sig-np.outer(c,d)+ch*d)@d)**2))
     p_zero=float(np.mean(((X_sig-np.outer(c,d))@d)**2))
-    r=unit(np.random.default_rng(abs(hash(name))%(2**32)).normal(size=d.shape))
+    r=unit(np.random.default_rng(zlib.crc32(str(name).encode())).normal(size=d.shape))
     p_rand=float(np.mean((X_sig@r)**2))
     ok = p_path < 0.35*p0 + 1e-8 and p_zero < 0.10*p0 + 1e-12 and p_rand > 0.30*p0 and p0>1e-10
     return dict(name=name, power=p0, path=p_path, zero=p_zero, rand=p_rand, passed=ok)

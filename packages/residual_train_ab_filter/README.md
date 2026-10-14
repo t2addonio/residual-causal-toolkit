@@ -17,3 +17,8 @@ GPUS="0 1" ./run_4x4090.sh   # two GPUs
 ./run_4x4090.sh             # four GPUs
 # → results/ab_summary.md
 ```
+
+## Data
+
+No `arm*_seed*.json` result files are committed. `aggregate.py` exits with an
+explanatory message until you run the training arms and point `--results` at their output.
