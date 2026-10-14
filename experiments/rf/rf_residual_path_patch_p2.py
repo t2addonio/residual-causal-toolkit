@@ -3,6 +3,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
 np.random.seed(42)
 FS, N, N_REAL = 1.0, 2048, 96
@@ -54,4 +57,4 @@ print(f"RF-P2 signal {np.mean(orig):.1f} path {np.mean(path):.1f} zero {np.mean(
 fig, ax = plt.subplots(figsize=(7,4))
 ax.bar(["signal","path","zero","random"], [np.mean(orig), np.mean(path), max(np.mean(zero),1e-16), np.mean(randp)])
 ax.set_yscale("log"); ax.set_title("RF-P2 subspace path-patch")
-fig.tight_layout(); fig.savefig(Path("/home/workdir/artifacts/rf_residual_path_patch_p2.png"), dpi=120); plt.close(fig)
+fig.tight_layout(); fig.savefig(artifacts_dir() / "rf_residual_path_patch_p2.png", dpi=120); plt.close(fig)

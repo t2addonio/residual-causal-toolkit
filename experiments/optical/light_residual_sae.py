@@ -3,6 +3,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
 N = 64
 X = (np.arange(N) - N / 2) * 1.0
@@ -63,7 +66,7 @@ def run_experiment(seed=0, n_train=400, n_held=100, n_random_atoms=16):
     base_powers, abl_powers = np.array(base_powers), np.array(abl_powers)
     random_abl_powers = np.array(random_abl_powers)
     print(f"baseline {base_powers.mean():.4f} residual-atom {abl_powers.mean():.6e} random-atom {random_abl_powers.mean():.4f}")
-    out_dir = Path("/home/workdir/artifacts")
+    out_dir = artifacts_dir()
     fig, axes = plt.subplots(2, 3, figsize=(14, 9))
     axes[0, 0].imshow(np.abs(direction), cmap="magma", origin="lower")
     axes[0, 0].set_title("Residual dictionary atom")

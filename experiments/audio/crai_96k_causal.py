@@ -10,8 +10,11 @@ from scipy.io import wavfile
 from scipy.signal import lfilter, stft
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
-OUT = Path("/home/workdir/artifacts")
+OUT = artifacts_dir()
 RNG = np.random.default_rng(11)
 SR, DUR, BLOCK, F0_PRIOR, N_HARM, TAU = 96000, 3.0, 32, 196.0, 8, 0.008
 AMDF_WIN, AMDF_HOP = int(0.020 * SR), 64

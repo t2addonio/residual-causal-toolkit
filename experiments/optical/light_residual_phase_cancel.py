@@ -6,6 +6,9 @@ Pure classical optics. No color-center content.
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
 N = 128
 X = (np.arange(N) - N / 2) * 1.0
@@ -86,7 +89,7 @@ def run_experiment(seed=0, n_train=80, n_held=80, alphas=None):
     print(f"α=1 residual power {res_pows[idx1]:.6e} (was {base_res_pow:.4f})")
     print(f"random-ctrl {ctrl_res_pows[idx1]:.4f}")
     print(f"α=2 residual power {res_pows[idx2]:.6e}")
-    out_dir = Path("/home/workdir/artifacts")
+    out_dir = artifacts_dir()
     fig, axes = plt.subplots(2, 2, figsize=(11, 9))
     axes[0, 0].imshow(np.abs(direction), cmap="magma", origin="lower")
     axes[0, 0].set_title("Recovered residual direction |amp|")

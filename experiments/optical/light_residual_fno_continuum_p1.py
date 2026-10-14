@@ -8,6 +8,9 @@ import hashlib
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
 N, DX = 128, 1.0
 X = (np.arange(N) - N/2) * DX
@@ -16,7 +19,7 @@ R2 = XX**2 + YY**2
 WAVELENGTH, Z_PROP = 2.0, 180.0
 K0 = 2.0 * np.pi / WAVELENGTH
 KMAX_KEEP, W_SKIP, BETA_RES, PHI_RES = 0.28, 0.12, 2.20, 0.70
-OUT = Path("/home/workdir/artifacts")
+OUT = artifacts_dir()
 
 def checksum_field(u):
     return hashlib.sha256(np.ascontiguousarray(u).view(np.uint8)).hexdigest()[:16]

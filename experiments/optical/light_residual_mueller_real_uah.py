@@ -8,9 +8,12 @@ random M does not match residual direction. Spectral residual SVD ~96% in top-1.
 from __future__ import annotations
 from pathlib import Path
 import json, numpy as np
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
 # If a measured cube 4x4xNλ is dropped at this path, run the real probe.
-CUBE = Path("/home/workdir/artifacts/uah_mueller_cube.npy")
+CUBE = artifacts_dir() / "uah_mueller_cube.npy"
 
 def residual_stokes_power(M, S_in=np.array([1.0, 0.4, 0.2, 0.1])):
     S_out = M @ S_in

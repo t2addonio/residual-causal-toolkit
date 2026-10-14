@@ -11,8 +11,11 @@ from numpy.linalg import norm
 from scipy.io import wavfile
 from scipy.ndimage import median_filter
 from scipy.signal import istft, stft
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
-OUT = Path("/home/workdir/artifacts")
+OUT = artifacts_dir()
 RNG = np.random.default_rng(11)
 SR, DUR, N_FFT, HOP, F0_PRIOR = 44100, 3.0, 4096, 256, 196.0
 

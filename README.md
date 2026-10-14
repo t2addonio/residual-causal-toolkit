@@ -57,3 +57,15 @@ Taddonio, *A Causally Necessary Residual-Stream Component in Grokking, Distinct 
 ## License
 
 MIT. See `LICENSE`.
+
+## Output folder
+
+Experiment scripts write figures and data to an artifacts folder, resolved in this order:
+
+1. an `--out` flag, for scripts that take one (via `artifacts_dir(args.out)` in `experiments/rct_paths.py`);
+2. the `RCT_ARTIFACTS` environment variable, e.g. `RCT_ARTIFACTS=/data/rct python experiments/nv/nv_residual_temperature.py`;
+3. `./artifacts` relative to the folder you run the script from.
+
+The folder is created if it does not exist. Inputs that scripts look for there (for example `uah_mueller_cube.npy` and `sdr_capture/`) should be placed in the same folder. `residual_toolkit/interferometer.py` now imports `residual_interferometer` from `packages/residual_isa_phase_e/` in this repo.
+
+Run the helper tests with `python -m pytest tests`.

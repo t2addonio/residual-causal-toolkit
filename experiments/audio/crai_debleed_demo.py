@@ -8,8 +8,11 @@ from __future__ import annotations
 from pathlib import Path
 import numpy as np
 from scipy.signal import stft
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
-OUT = Path("/home/workdir/artifacts")
+OUT = artifacts_dir()
 RNG = np.random.default_rng(7)
 SR, N_FFT, HOP = 44100, 2048, 512
 
