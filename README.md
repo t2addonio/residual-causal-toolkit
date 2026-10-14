@@ -4,6 +4,8 @@
 
 # Residual Causal Toolkit
 
+> **Errata (2026-10-14):** several "closed" results below can't be reproduced from this repo, and the committed "real data" scripts run on planted synthetic data. See [`ERRATA.md`](ERRATA.md) before citing any result.
+
 Cross-domain residual-stream addressing: contrastive extraction, path-patch, parallel ports, Residual Stream ISA, CRAI audio isolation, and field / kernel ports.
 
 **Author:** Tony Taddonio  
@@ -44,7 +46,18 @@ It is not a neural-operator lab, not an LLM, not a QPU, and not a replacement fo
 
 ## Status on 8 September 2026
 
-**Closed.** Optical classical suite including real UAH Mueller. RF path-patch P1–P3. NV single / multi / B / T plus real Hole/NoHole 14-D. Planck residual ports. EEG. Telemetry synthetic + real naval. GPT-2 Phases A–D (16/16 online write-hook). Residual Stream ISA. CRAI-3 synthetic PASS + 96 kHz causal bank. Continuum P1–P3. Train A/B executed; success rule FAIL (`B` is not `≥ A`). Unified paper written (optical + superposition + quantum + ISA + later campaign).
+~~**Closed.** Optical classical suite including real UAH Mueller. RF path-patch P1–P3. NV single / multi / B / T plus real Hole/NoHole 14-D. Planck residual ports. EEG. Telemetry synthetic + real naval. GPT-2 Phases A–D (16/16 online write-hook). Residual Stream ISA. CRAI-3 synthetic PASS + 96 kHz causal bank. Continuum P1–P3. Train A/B executed; success rule FAIL (`B` is not `≥ A`). Unified paper written (optical + superposition + quantum + ISA + later campaign).~~
+
+**Corrected status (2026-10-14 audit):**
+
+| Item | What the repo actually supports |
+|---|---|
+| Optical, RF P1–P3, NV, telemetry, CRAI-3, Continuum, ISA | **Synthetic demos.** Scripts run on CPU and print PASS, but on planted linear residuals, where near-zero residual after projection/path-patch (~1e-24) is true by construction. They show the code works, not that the effect holds on real data. |
+| "Real" UAH Mueller, NV Hole/NoHole 14-D, real naval telemetry, Planck | **Not reproducible from this repo.** The committed scripts use synthetic stand-ins ("drop a cube at `artifacts/uah_mueller_cube.npy`"); real data and real-data runs are not committed. |
+| EEG, quantum, transformer 14-D | **Unbacked here:** only `*_summary.txt` files, no scripts. |
+| GPT-2 Phases A–D (16/16 online write-hook) | **Can't be reproduced:** `phase_a_frozen_ports` and `phase_c_closed_loop` modules are missing; no Phase D results are committed. |
+| Train A/B | Executed; success rule FAIL (`B` is not `≥ A`). Result data not committed. |
+| Random controls (e.g. telemetry path-patch) run before 2026-10-14 | Seeded with Python `hash()`, which changes every run; not exactly reproducible. Fixed in PR #2 (`zlib.crc32`). |
 
 **In hand.** RTL-SDR Blog V4 (R828D + RTL2832U), receive-only, arrived 3 September 2026. First IQ dump 7 September 2026 (`fm_sanity.cu8` at 97.5 MHz). Preferred first plant: conducted coax + pads, SDR as RX, separate scriptable TX. Closed loop = READ residual port → FILTER → WRITE an actuator. Received `S` untouched.
 
@@ -66,6 +79,6 @@ Experiment scripts write figures and data to an artifacts folder, resolved in th
 2. the `RCT_ARTIFACTS` environment variable, e.g. `RCT_ARTIFACTS=/data/rct python experiments/nv/nv_residual_temperature.py`;
 3. `./artifacts` relative to the folder you run the script from.
 
-The folder is created if it does not exist. Inputs that scripts look for there (for example `uah_mueller_cube.npy` and `sdr_capture/`) should be placed in the same folder. `residual_toolkit/interferometer.py` now imports `residual_interferometer` from `packages/residual_isa_phase_e/` in this repo.
+The folder is created if it does not exist. Inputs that scripts look for there (for example `uah_mueller_cube.npy` and `sdr_capture/`) should be placed in the same folder. `residual_toolkit/interferometer.py` imports `residual_interferometer` from `experiments/isa/` in this repo (corrected in PR #2; the earlier `packages/residual_isa_phase_e/` pointer was a self-importing shim).
 
 Run the helper tests with `python -m pytest tests`.
