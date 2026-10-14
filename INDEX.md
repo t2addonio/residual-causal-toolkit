@@ -24,7 +24,7 @@ FILTER = path-patch + zero + random + (atom). Probe arms, not co-occurrence SVD-
 3. `experiments/rf/rf_residual_path_patch_p1.py` + `sdr_residual_offline_iq.py`
 4. `experiments/nv/nv_residual_odmr_toolkit.py` then `nv_residual_poly_14d_real_summary.txt`
 5. `experiments/audio/crai_clean_isolate.py` (printable) then `crai_96k_causal.py` (live)
-6. `packages/residual_causal_gpt2/phase_d_online_residual.py` — 16/16 write-hook
+6. `packages/residual_causal_gpt2/phase_d_online_residual.py` — 16/16 write-hook (**not reproducible from this repo**: Phase A/C modules missing, no Phase D results committed; see `ERRATA.md`)
 7. `experiments/isa/residual_interferometer.py` — unitary plane, complement flat
 
 ## Locks (do not quietly reverse)

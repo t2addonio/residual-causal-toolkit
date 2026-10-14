@@ -14,6 +14,8 @@ A residual component in an additive mixture is recoverable by contrastive extrac
 
 ## Status 4 September 2026
 
+> **Errata (2026-10-14):** the "real" data results and "GPT-2 Phases A–D 16/16" in the next line can't be reproduced from this repo; the committed scripts are synthetic demos. See [`../../ERRATA.md`](../../ERRATA.md).
+
 Closed: optical classical + real UAH Mueller; RF-P1/P2/P3; NV single/multi/B/T + real Hole/NoHole 14-D; Planck ports; EEG; telemetry synthetic + real naval; GPT-2 Phases A–D 16/16; Residual Stream ISA; CRAI-3 synthetic PASS + 96 kHz causal bank; Continuum P1–P3; Train A/B executed and B was not ≥ A.
 
 In hand: RTL-SDR Blog V4 receive-only, arrived 3 September 2026. Closed loop = READ residual port → FILTER → WRITE an actuator. Received S untouched.

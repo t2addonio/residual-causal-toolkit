@@ -56,6 +56,8 @@ Path-patch is the causality test. S is RAM. Audio product gate is a trained ear.
 
 ## Status 8 September 2026
 
+> **Errata (2026-10-14):** the "real" data results and "GPT-2 Phases A–D 16/16" in the next line can't be reproduced from this repo; the committed scripts are synthetic demos. See [`../../ERRATA.md`](../../ERRATA.md).
+
 Closed: optical including real Mueller; RF P1–P3; NV including real 14-D E²; Planck; EEG; telemetry; GPT-2 A–D 16/16; ISA; CRAI-3 synthetic PASS + 96 kHz lock-in; Continuum P1–P3; Train A/B honest FAIL; first owned-SDR IQ dump.
 
 Next: owned-plant RF closed loop on the V4; real close-mics through CRAI before any plugin wrap.
