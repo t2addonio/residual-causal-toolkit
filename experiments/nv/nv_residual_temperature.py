@@ -7,8 +7,11 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
-OUT = Path("/home/workdir/artifacts")
+OUT = artifacts_dir()
 RNG = np.random.default_rng(11)
 D0, ALPHA, E_TYP, FWHM = 2.870, -74e-6, 0.003, 0.004
 F = np.linspace(2.84, 2.90, 400)

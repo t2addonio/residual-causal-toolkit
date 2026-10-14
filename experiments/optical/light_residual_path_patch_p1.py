@@ -13,6 +13,9 @@ Pure classical optics. Single residual mode.
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
 N = 64
 X = (np.arange(N) - N / 2) * 1.0
@@ -88,7 +91,7 @@ def run_p1(seed=0, n_train=200, n_held=100):
     rp_rand, li_rand = metrics(field_patch_rand, "random-dir patch")
     rp_held_field, li_held_field = metrics(test_held, "held-out field")
 
-    out_dir = Path("/home/workdir/artifacts")
+    out_dir = artifacts_dir()
     fig, axes = plt.subplots(2, 3, figsize=(14, 9))
     axes[0, 0].imshow(np.abs(direction), cmap="magma", origin="lower")
     axes[0, 0].set_title("Residual direction |amp|")

@@ -6,6 +6,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
 np.random.seed(42)
 FS, N, N_REAL = 1.0, 2048, 80
@@ -73,7 +76,7 @@ orig_p, pp_held_p = np.array(orig_p), np.array(pp_held_p)
 pp_zero_p, pp_rand_p = np.array(pp_zero_p), np.array(pp_rand_p)
 print(f"RF-P1 power signal {orig_p.mean():.2f} path {pp_held_p.mean():.2f} zero {pp_zero_p.mean():.2e} rand {pp_rand_p.mean():.2f}")
 
-out_png = Path("/home/workdir/artifacts/rf_residual_path_patch_p1.png")
+out_png = artifacts_dir() / "rf_residual_path_patch_p1.png"
 fig = plt.figure(figsize=(10, 4))
 ax = fig.add_subplot(111)
 ax.bar(["signal", "path-held", "zero", "random"],

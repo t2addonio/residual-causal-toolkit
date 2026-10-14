@@ -9,7 +9,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-_ART = Path("/home/workdir/artifacts")
+# residual_interferometer.py ships in packages/residual_isa_phase_e
+_ART = Path(__file__).resolve().parents[2] / "residual_isa_phase_e"
 if str(_ART) not in sys.path:
     sys.path.insert(0, str(_ART))
 

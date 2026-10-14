@@ -8,8 +8,11 @@ from __future__ import annotations
 import hashlib, json
 from pathlib import Path
 import numpy as np
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from rct_paths import artifacts_dir  # noqa: E402
 
-ROOT = Path("/home/workdir/artifacts")
+ROOT = artifacts_dir()
 CAPTURE_DIR = ROOT / "sdr_capture"
 FS, N, N_SIG, N_HELD = 2_048_000.0, 2048, 64, 64
 F_CARRIER, F_RES, F_SPUR, NOISE, SEED = 200_000.0, 450_000.0, 50_000.0, 0.018, 20260903
