@@ -1,0 +1,5 @@
+# Dependencies for the standalone scripts under experiments/
+# (audio scripts need scipy; most demos save plots with matplotlib)
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7

@@ -1,4 +1,5 @@
 """Causal filter suite: path-patch, zero, random, residual-atom selectivity."""
+import zlib  # stable per-name seed (hash() is salted per process)
 import numpy as np
 import torch
 
@@ -23,7 +24,7 @@ def apply_causal_filters(X_sig, X_held, direction, name="port", rng=None):
     X_held = np.asarray(X_held, dtype=np.float64)
     direction = np.asarray(direction, dtype=np.float64)
     if rng is None:
-        rng = np.random.default_rng(abs(hash(name)) % (2**32))
+        rng = np.random.default_rng(zlib.crc32(str(name).encode()))
     d = direction / (np.linalg.norm(direction) + 1e-12)
     c_sig = X_sig @ d
     c_held_mean = float(np.mean(X_held @ d))

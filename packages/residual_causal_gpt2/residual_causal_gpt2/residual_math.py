@@ -1,5 +1,6 @@
 """Domain-agnostic residual causal primitives (R1/R2/R3 parallel ports)."""
 from __future__ import annotations
+import zlib  # stable per-name seed (hash() is salted per process)
 from dataclasses import dataclass
 from typing import List, Optional, Dict, Any
 import numpy as np
@@ -26,7 +27,7 @@ class PortResult:
     name: str; power: float; path: float; zero: float; rand: float; held: float; passed: bool; direction: np.ndarray
 
 def apply_causal_filters(X_sig, X_held, direction, name="port", rng=None):
-    rng = rng or np.random.default_rng(abs(hash(name))%(2**32))
+    rng = rng or np.random.default_rng(zlib.crc32(str(name).encode()))
     d = unit(direction); c = X_sig @ d; ch = float(np.mean(X_held @ d))
     p0 = float(np.mean(c**2)); held_p = float(np.mean((X_held@d)**2))
     p_path = residual_power(X_sig - np.outer(c,d) + ch*d, d)
